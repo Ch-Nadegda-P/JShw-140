@@ -156,6 +156,16 @@ for (let i = 0; i < visotaTr; i++) {
     console.log(pustoiKopob);
 }
 
+console.log('------------------4.11--Исправление-------------------------------')
+
+let visotaTr1 = prompt('Введите высоту треугольника');
+let pustoiKopob1 = '';
+
+for (let i = 1; i <= visotaTr1; i++) {
+    pustoiKopob1 = ' '.repeat(visotaTr1 - i) + '^'.repeat(2 * i - 1);
+    console.log(pustoiKopob1);
+}
+
 console.log('------------------4.12-1.Дополнительное задание---------------------------------')
 // Найдите сумму элементов массива (3, -5, "23", 0, "0", 1, -9)
 
