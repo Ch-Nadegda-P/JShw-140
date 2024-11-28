@@ -120,7 +120,7 @@ function promptForDate(promptText) {
 }
 
 let date1 = promptForDate("Введите первую дату (Дата.Месяц.День-типо: 12.04.1982):");
-let date2 = promptForDate("Введите вторую дату (Дата.Месяц.День-типо: 12.04.19872):");
+let date2 = promptForDate("Введите вторую дату (Дата.Месяц.День-типо: 12.04.1987):");
 
 console.log(
   "Количество дней между датами: " + checkDateDifference(date1, date2)
