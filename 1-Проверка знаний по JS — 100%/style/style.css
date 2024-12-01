@@ -1,0 +1,142 @@
+#tamagotchi-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff; 
+  padding: 20px;
+  border-radius: 10px;
+
+}
+#action-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+ 
+}
+#tamagotchi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.info-box {
+  margin: 24px;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  min-width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.tamagotchi-figure {
+  width: 225px; 
+  height: 225px; 
+  background-color: #f0c420;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eye {
+  width: 30px; 
+  height: 30px; 
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px; 
+}
+.eye.left {
+  left: 52.5px; 
+}
+.eye.right {
+  right: 52.5px; 
+}
+.tamagotchi-smile {
+  position: absolute;
+  width: 90px; 
+  height: 45px; 
+  border: 2px solid #000;
+  background-color: #8b0000;
+  border-radius: 0 0 50px 50px;
+  bottom: 30px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tamagotchi-frown {
+  position: absolute;
+  width: 60px; 
+  border: 2px solid #000;
+  bottom: 50px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+.closed-eyes .eye {
+  background-color: transparent;
+  border-top: 2px solid #000;
+  border-radius: 0;
+}
+.hidden {
+  display: none;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+#button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#turn-on,
+#feed,
+#heal {
+  background-color: #4caf50;
+  color: white;
+}
+#turn-off {
+  background-color: #8b0000; 
+  color: white;
+}
+#message-box {
+  position: absolute;
+  top: -50px;
+  font-size: 24px; 
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+
+}
+#changing-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8b0000; 
+  animation: blink 1s infinite; 
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

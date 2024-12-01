@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/media.css" />
+  </head>
+
+  <body>
+    <div id="tamagotchi-container">
+      <div id="action-container">
+        <div id="message-box"></div>
+        <button id="feed" onclick="feed()">Покормить</button>
+        <button id="heal" onclick="heal()">Полечить</button>
+      </div>
+      <div id="tamagotchi" class="closed-eyes">
+        <div class="info-box hidden" id="greeting"></div>
+        <div class="tamagotchi-figure">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="tamagotchi-frown"></div>
+          <div class="tamagotchi-smile hidden"></div>
+        </div>
+        <div class="info-box hidden" id="info">
+          <h2>Мои жизненные показатели</h2>
+          <div id="health">Здоровье:</div>
+          <div id="hunger">Сытость:</div>
+          <div id="sleep">Сон:</div>
+          <div id="changing-text">Они меняются каждую минуту</div>
+        </div>
+      </div>
+      <div id="button-container">
+        <button id="turn-on" onclick="turnOn()">Разбудить</button>
+        <button id="turn-off" onclick="turnOff()">Уложить спать</button>
+      </div>
+    </div>
+
+    <script src="./js/tamagochi.js"></script>
+  </body>
+</html>
