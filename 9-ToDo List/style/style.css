@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font-family: arial;
+  font-size: 16px;
+  line-height: 24px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+ul {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+  width: 12px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #e5eaf3;
+  border-radius: 5px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: #369;
+  border-radius: 5px;
+  border: 2px solid #e5eaf3;
+}
+
+.todo {
+  box-shadow: 0 0 5px #666;
+  border-radius: 5px;
+  width: 500px;
+  overflow: hidden;
+  background-color: #e5eaf3;
+}
+
+.todo__title {
+  background-color: #369;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 30px;
+  text-shadow: 0 0 2px #000;
+  box-shadow: 0 2px 5px #666;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.todo__field-name {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 10px 5px;
+  width: calc(100% - 2px - 10px);
+  padding: 10px 20px;
+}
+
+.todo__field-name::placeholder {
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+}
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 5px 0;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.todo__status {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  position: relative;
+}
+
+.todo__status:checked {
+  background-color: #a9e4a9;
+}
+
+.todo__status:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #369;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todo__name {
+  font-size: 14px;
+  color: #204060;
+  font-weight: bold;
+  text-transform: uppercase;
+  flex-grow: 1;
+  word-break: break-word;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todo__status:checked ~ .todo__name {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.button__delete {
+  background-color: #369;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 0 2px #000;
+  box-shadow: 0 2px 5px #666;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.button__clear {
+  width: 460px;
+  display: block;
+  margin: 10px auto;
+  background-color: #369;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 0 2px #000;
+  box-shadow: 0 2px 5px #666;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button__delete:hover,
+.button__clear:hover {
+  background-color: #204060;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.edit-popup {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e5eaf3;
+  padding: 20px;
+  box-shadow: 0 0 5px #666;
+  border-radius: 5px;
+  z-index: 1000;
+  width: 500px;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.edit-popup__hint {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #e5eaf3;
+  padding: 5px 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #666;
+  font-size: 12px;
+  color: #204060;
+  z-index: 1000;
+  transform: translateY(-100%);
+  margin-top: -5px;
+  pointer-events: none;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background-color: #369;
+  top: 2px;
+  left: 10px;
+}
+
+.close-button::before {
+  transform: rotate(45deg);
+}
+
+.close-button::after {
+  transform: rotate(-45deg);
+}
+
+.close-button:hover::before,
+.close-button:hover::after {
+  background-color: #204060;
+}
