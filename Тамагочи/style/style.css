@@ -1,0 +1,296 @@
+/*-----------Контейнер---------------------- */
+.tamagotchi {
+  width: 280px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #ebfbd7;
+}
+/*------------Имя--------------------- */
+.pet-name {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
+/*-----------Экран------------------- */
+.screen {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  height: 350px;
+  position: relative;
+}
+/*-----------Кон.Игра---------------------- */
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  margin-bottom: 20px;
+}
+/*---------Кон. выбора цвета------------------------ */
+.bow-colors, .dress-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40px;
+  padding-bottom: 130px;
+}
+
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.color-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #333;
+  transition: transform 0.2s;
+}
+
+.color-circle:hover {
+  transform: scale(1.2);
+}
+
+.color-circle[data-color="1"] { background-color: #000000; }
+.color-circle[data-color="2"] { background-color: #ffe5c0; }
+.color-circle[data-color="3"] { background-color: #c4f9a3; }
+.color-circle[data-color="4"] { background-color: #e978e9; }
+.color-circle[data-color="5"] { background-color: #bff0fc; }
+/*--------Заголовки------------------------- */
+h3 {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+/*------Кон. для девочки--------------------------- */
+.pet-girl {
+  width: 160px;
+  height: 240px;
+  margin: 0 auto;
+  position: relative;
+  animation: sway 2s infinite ease-in-out;
+}
+/*----------Голова----------------------- */
+.head {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+/*-----------Глаза---------------------- */
+.eye {
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 28px;
+}
+
+.eye-left { left: 20px; }
+.eye-right { right: 20px; }
+/*---------Рот------------------------ */
+.mouth {
+  width: 20px;
+  height: 10px;
+  border-bottom: 2px solid black;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*--------Бантики------------------------- */
+.bow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 24px solid black;
+  position: absolute;
+  top: -16px;
+  filter: drop-shadow(0px 0px 1px #333);
+}
+
+.bow-left {
+  left: 8px;
+  transform: rotate(-30deg);
+}
+
+.bow-right {
+  right: 8px;
+  transform: rotate(30deg);
+}
+/*---------Платье------------------------ */
+.dress {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 65px solid black;
+  position: absolute;
+  top: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0px 0px 1px #333);
+}
+/*--------Руки------------------------- */
+.arm {
+  width: 2px;
+  height: 70px;
+  background: black;
+  position: absolute;
+  top: 60px;
+}
+
+.arm-left {
+  left: 45px;
+  transform: rotate(50deg);
+}
+
+.arm-right {
+  right: 45px;
+  transform: rotate(-50deg);
+}
+/*-----------Ноги---------------------- */
+.leg {
+  width: 2px;
+  height: 55px;
+  background: black;
+  position: absolute;
+  bottom: 48px;
+}
+
+.leg-left {
+  left: 60px;
+  transform: rotate(15deg);
+}
+
+.leg-right {
+  right: 60px;
+  transform: rotate(-15deg);
+}
+/*------Блок статистики--------------------------- */
+.stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: #fdeedd;
+  border-radius: 8px;
+}
+
+.stats div {
+  margin: 5px 0;
+  font-size: 14px;
+  text-align: center;
+}
+/*-------Блок с кнопками-------------------------- */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.controls button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #45a049;
+}
+/*--------Окно смерти------------------------- */
+.death-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+  z-index: 1000;
+}
+
+.orthodox-cross {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.death-message {
+  font-size: 16px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+/*--------Окно мини игры------------------------- */
+.math-game-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+  z-index: 1000;
+  min-width: 280px;
+}
+/*--------------------------------- */
+.game-message {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-family: Arial, sans-serif;
+  white-space: pre-line;
+}
+
+.game-button {
+  padding: 8px 30px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.game-button:hover {
+  background: #45a049;
+}
+/*---------Покачивания------------------------ */
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
