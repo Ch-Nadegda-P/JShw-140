@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  color: #2b5675;
+  font-family: "Great Vibes", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.contacts {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #a4bed1;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.contacts-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.contacts-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.contacts-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contacts-button.add {
+  background-color: #2b5675;
+  color: white;
+}
+
+.contacts-button.reset {
+  background-color: #ffa2a2;
+  color: #333;
+}
+
+.contacts-button.edit {
+  background-color: #2b5675;
+  color: white;
+}
+
+.contacts-button.remove {
+  background-color: #ffa2a2;
+  color: #333;
+}
+
+.contacts-button.api {
+  background-color: #5c7d9c;
+  color: white;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contacts-list {
+  display: grid;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.contact-info p {
+  margin: 3px 0;
+  color: #626262;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.contacts-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.contacts-message {
+  color: #ff4d4d;
+  text-align: center;
+  margin: 10px auto;
+  font-weight: bold;
+  max-width: 500px;
+}
+
+.contacts-button.api {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #2b5675;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contacts-button.api:hover {
+  background-color: #2b5675;
+}
+
+.contacts-button.search {
+  background-color: #ffa2a2;
+}
+
+.contacts-button.search:hover {
+  background-color: #ffa2a2;
+}
