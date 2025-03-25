@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+body, input, button, textarea {
+    font-family: arial;
+}
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+.notes {
+    padding: 48px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    align-items: center;
+    
+}
+
+.notes__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    min-width: 400px;
+    max-width: 70%;
+    height: 100px;
+
+    background-color: hsl(187, 87%, 91%);
+    padding: 12px;
+
+    box-shadow: 0 3px 10px #666;
+    border-radius: 8px;
+}
+
+.notes__field_title,
+.notes__field_content {
+    border: 0;
+    outline: 0;
+    background-color: hsl(187, 87%, 91%);;
+    
+    
+
+}
+
+.notes__field_title {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    
+    
+}
+
+.notes__field_content {
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+
+    /* min-height: 150px; */
+}
+
+.notes__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.notes__item {
+    flex: 1 1;
+
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px #bcbcbc;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    min-width: 300px;
+    max-width: 33.3%;
+
+    background-color: rgb(232, 254, 248);
+}
+
+.notes__item:hover {
+    box-shadow: 0 0 5px #999;
+}
+
+.notes__item.selected {
+    background-color: lightcyan;
+    box-shadow: 0 0 30px #ccc;
+}
+
+.notes__item.cloned {
+    background-color: #ededed;
+    opacity: 0.5;
+}
+
+.notes__item > * {
+    pointer-events: none;
+}
+
+.note__title {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.note__btns {
+    margin-top: auto;
+}
+
+.note__btns > * {
+    pointer-events: all;
+}
+
+.note__btn_remove {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/images/ico_remove.png");
+    background-repeat: no-repeat;
+    background-size: 18px auto;
+    background-position: center;
+    border: 0;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+.note__btn_remove:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.note__form_edit {
+    background-color: hsl(196, 33%, 87%);
+    box-shadow: 0 0 8px #666;
+    display: inline-flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    border: 15px;
+
+    position: fixed;
+    
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.note__form_edit input,
+.note__form_edit textarea {
+    width: 100%;
+
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 4px;
+}
+
+.note__form_edit input {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    
+}
+
+.note__form_edit textarea {
+    font-size: 14px;
+    line-height: 22px;
+    color: #333;
+
+    min-height: 150px;
+}
+
+.note__form_edit button {
+    background-color: #bae4f0;
+    border-radius: 10px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+button.note__btn_close {
+    position: absolute;
+    top: 215px;
+    right: 10px;
+}
+
+.note__form_edit button:hover {
+    background-color: #666;
+    color: #fff;
+}
