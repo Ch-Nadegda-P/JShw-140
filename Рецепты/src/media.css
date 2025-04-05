@@ -1,0 +1,79 @@
+/* Адаптивные стили */
+
+/* Планшеты */
+@media (max-width: 992px) {
+  .recipes {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .recipe-detail__info {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .recipes {
+    grid-template-columns: 1fr;
+  }
+  
+  .recipe-card__image {
+    height: 180px;
+  }
+  
+  .recipe-detail__info {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .search-form__input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .search-form__button {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
+
+/* Маленькие мобильные устройства */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .recipe-detail__info {
+    grid-template-columns: 1fr;
+  }
+  
+  .recipe-card__info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
